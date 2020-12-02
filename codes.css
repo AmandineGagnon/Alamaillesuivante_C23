@@ -1,0 +1,151 @@
+/* GENERAL */
+
+body
+{
+    font-family: 'Ubuntu';
+    font-size: 18px;  
+}
+
+h2
+{
+    color: blanchedalmond;
+    font-family: 'Ubuntu';
+}
+
+h4
+{   font-size: 24px;
+    font-family: 'Ubuntu';
+    color: darkgreen;
+    
+}
+
+p
+{
+    font-size: 18px;
+    color: darkgreen;
+    font-family: 'Ubuntu';
+}
+
+.wrapper
+{
+    width : 940px;
+    margin: auto;
+    padding: 0 10px;
+}
+ul
+{
+    list-style: none
+}
+a
+{
+    text-decoration: none
+}
+.orange 
+{
+    color:slategrey
+}
+
+/* HEADER */
+header
+{
+height:90px;
+}
+
+.logo
+{
+float:left;
+margin-bottom:20px;
+}
+
+.whitespace
+{
+    height:10px;
+}
+
+header nav
+{
+    float: right;
+    clear: both;
+}
+
+header nav ul li
+{
+    display: inline-block; 
+    padding: 0 0 0 20px;
+}
+header nav ul li a
+{  
+    text-transform: uppercase;
+    font-weight: bold;
+    color: slategrey;
+}
+
+.nav_link:hover
+{
+    color:black;
+    font-size: larger;
+}
+    
+    /*Main image*/
+
+#main-image
+{   margin:auto;
+    height: 580px;
+    background: url('image/yoga%20smoothie.jpg') no-repeat; 
+    background-position:center; 
+}
+
+#main-image h2
+{
+    font-size: 60px; 
+    font-weight: normal;
+    color: antiquewhite;
+    text-align: left;
+    padding: 40px 0 20px 0;
+    text-shadow: 2px 2px #444;
+}
+
+.button-1
+{
+    display: block;
+    font-family: 'Ubuntu';
+    width: 180px;
+    height: 50px;
+    background: darkgoldenrod;
+    text-transform: uppercase;
+    font-size : 20px;
+    color: aliceblue;
+    border-color: aliceblue;
+    border: 1px;
+    margin: 10px auto;
+    line-height: 50px;
+    text-align : center;
+    border-radius: 5px;
+}
+
+.button-1:hover
+{
+    background: #028583
+}
+/*liens vers les modeles */
+
+#liens ul
+{
+    display: inline-block;
+}
+
+#liens ul li
+{
+    width: 300px;
+    float : left;    
+    padding : 20px 0 0 0;
+    margin-top: 40px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+#liens h4
+{
+    text-transform: uppercase;
+    margin-left: 30px;
+}

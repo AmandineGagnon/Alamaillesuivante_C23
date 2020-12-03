@@ -1,103 +1,95 @@
 /* GENERAL */
 
-body
-{
+body {
     font-family: 'Ubuntu';
-    font-size: 18px;  
+    font-size: 18px;
+    background-color: rgb(211, 141, 134);
 }
 
-h2
-{
+h2 {
     color: blanchedalmond;
     font-family: 'Ubuntu';
 }
 
-h4
-{   font-size: 24px;
+h4 {
+    font-size: 24px;
     font-family: 'Ubuntu';
     color: darkgreen;
-    
 }
 
-p
-{
+p {
     font-size: 18px;
     color: darkgreen;
     font-family: 'Ubuntu';
 }
 
-.wrapper
-{
-    width : 940px;
+.wrapper {
+    width: 940px;
     margin: auto;
     padding: 0 10px;
 }
-ul
-{
+
+ul {
     list-style: none
 }
-a
-{
+
+a {
     text-decoration: none
 }
-.orange 
-{
-    color:slategrey
+
+.orange {
+    color: slategrey
 }
+
 
 /* HEADER */
-header
-{
-height:90px;
+
+header {
+    height: 90px;
 }
 
-.logo
-{
-float:left;
-margin-bottom:20px;
+.logo {
+    float: left;
+    margin-bottom: 20px;
 }
 
-.whitespace
-{
-    height:10px;
+.whitespace {
+    height: 10px;
 }
 
-header nav
-{
+header nav {
     float: right;
     clear: both;
 }
 
-header nav ul li
-{
-    display: inline-block; 
+header nav ul li {
+    display: inline-block;
     padding: 0 0 0 20px;
 }
-header nav ul li a
-{  
+
+header nav ul li a {
     text-transform: uppercase;
     font-weight: bold;
     color: slategrey;
 }
 
-.nav_link:hover
-{
-    color:black;
+.nav_link:hover {
+    color: black;
     font-size: larger;
 }
-    
-    /*Main image*/
 
-#main-image
-{   margin:auto;
+
+/*Main image*/
+
+#main-image {
+    margin: auto;
     height: 580px;
-    background: url('image/yoga%20smoothie.jpg') no-repeat; 
-    background-position:center; 
+    background: url('image/yoga%20smoothie.jpg') no-repeat;
+    background-position: center;
 }
 
-#main-image h2
-{
-    font-size: 60px; 
+#main-image h2 {
+    font-size: 60px;
     font-weight: normal;
     color: antiquewhite;
     text-align: left;
@@ -105,47 +97,44 @@ header nav ul li a
     text-shadow: 2px 2px #444;
 }
 
-.button-1
-{
+.button-1 {
     display: block;
     font-family: 'Ubuntu';
     width: 180px;
     height: 50px;
     background: darkgoldenrod;
     text-transform: uppercase;
-    font-size : 20px;
+    font-size: 20px;
     color: aliceblue;
     border-color: aliceblue;
     border: 1px;
     margin: 10px auto;
     line-height: 50px;
-    text-align : center;
+    text-align: center;
     border-radius: 5px;
 }
 
-.button-1:hover
-{
+.button-1:hover {
     background: #028583
 }
+
+
 /*liens vers les modeles */
 
-#liens ul
-{
+#liens ul {
     display: inline-block;
 }
 
-#liens ul li
-{
+#liens ul li {
     width: 300px;
-    float : left;    
-    padding : 20px 0 0 0;
+    float: left;
+    padding: 20px 0 0 0;
     margin-top: 40px;
     text-align: center;
     margin-right: 10px;
 }
 
-#liens h4
-{
+#liens h4 {
     text-transform: uppercase;
     margin-left: 30px;
 }

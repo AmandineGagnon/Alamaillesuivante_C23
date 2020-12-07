@@ -1,140 +1,152 @@
-/* GENERAL */
-
-body {
-    font-family: 'Ubuntu';
-    font-size: 18px;
-    background-color: rgb(211, 141, 134);
-}
-
-h2 {
-    color: blanchedalmond;
-    font-family: 'Ubuntu';
-}
-
-h4 {
-    font-size: 24px;
-    font-family: 'Ubuntu';
-    color: darkgreen;
-}
-
-p {
-    font-size: 18px;
-    color: darkgreen;
-    font-family: 'Ubuntu';
-}
-
-.wrapper {
-    width: 940px;
-    margin: auto;
-    padding: 0 10px;
-}
-
-ul {
-    list-style: none
-}
-
-a {
-    text-decoration: none
-}
-
-.orange {
-    color: slategrey
-}
-
-
-/* HEADER */
-
-header {
-    height: 90px;
-}
-
-.logo {
-    float: left;
-    margin-bottom: 20px;
-}
-
-.whitespace {
-    height: 10px;
-}
-
-header nav {
-    float: right;
-    clear: both;
-}
-
-header nav ul li {
-    display: inline-block;
-    padding: 0 0 0 20px;
-}
-
-header nav ul li a {
-    text-transform: uppercase;
-    font-weight: bold;
-    color: slategrey;
-}
-
-.nav_link:hover {
-    color: black;
-    font-size: larger;
-}
-
-
-/*Main image*/
-
-#main-image {
-    margin: auto;
-    height: 580px;
-    background: url('image/yoga%20smoothie.jpg') no-repeat;
-    background-position: center;
-}
-
-#main-image h2 {
-    font-size: 60px;
-    font-weight: normal;
-    color: antiquewhite;
-    text-align: left;
-    padding: 40px 0 20px 0;
-    text-shadow: 2px 2px #444;
-}
-
-.button-1 {
-    display: block;
-    font-family: 'Ubuntu';
-    width: 180px;
-    height: 50px;
-    background: darkgoldenrod;
-    text-transform: uppercase;
-    font-size: 20px;
-    color: aliceblue;
-    border-color: aliceblue;
-    border: 1px;
-    margin: 10px auto;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.button-1:hover {
-    background: #028583
-}
-
-
-/*liens vers les modeles */
-
-#liens ul {
-    display: inline-block;
-}
-
-#liens ul li {
-    width: 300px;
-    float: left;
-    padding: 20px 0 0 0;
-    margin-top: 40px;
-    text-align: center;
-    margin-right: 10px;
-}
-
-#liens h4 {
-    text-transform: uppercase;
-    margin-left: 30px;
-}
+    body {
+        border: solid 2px red;
+    }
+    
+    h2 {
+        border: solid 2px pink;
+    }
+    
+    div {
+        border: solid 2px blue;
+    }
+    
+    header {
+        border: solid 2px green;
+    }
+    
+    li {
+        border: solid 2px yellow;
+    }
+    
+    ul {
+        border: solid 2px purple;
+    }
+    
+    footer {
+        border: solid 2px lightblue;
+    }
+    /* GENERAL */
+    
+     :root {
+        --h2size: 60px;
+        /*rose*/
+        --couleur1-h: 0;
+        --couleur1-s: 67%;
+        --couleur1-l: 74%;
+        --couleur1-nominale: hsl(var(--couleur1-h), var(--couleur1-s), var(--couleur1-l));
+        --couleur1-hover: hsl(var(--couleur1-h), var(--couleur1-s), calc(var(--couleur1-l)*1.2));
+        /*almond*/
+        --couleur2-h: 34;
+        --couleur2-s: 78%;
+        --couleur2-l: 91%;
+        --couleur2-nominale: hsl(var(--couleur2-h), var(--couleur2-s), var(--couleur2-l));
+        --couleur2-hover: hsl(var(--couleur2-h), var(--couleur2-s), calc(var(--couleur2-l)*1.2));
+        /*or*/
+        --couleur3-h: 43;
+        --couleur3-s: 89%;
+        --couleur3-l: 38%;
+        --couleur3-nominale: hsl(var(--couleur3-h), var(--couleur3-s), var(--couleur3-l));
+        --couleur3-hover: hsl(var(--couleur3-h), var(--couleur3-s), calc(var(--couleur3-l)*1.2));
+        /*turquoise*/
+        --couleur4-h: 179;
+        --couleur4-s: 97%;
+        --couleur4-l: 26%;
+        --couleur4-nominale: hsl(var(--couleur4-h), var(--couleur4-s), var(--couleur4-l));
+        --couleur4-hover: hsl(var(--couleur4-h), var(--couleur4-s), calc(var(--couleur4-l)*1.2));
+        /*gris*/
+        --couleur5-h: 233;
+        --couleur5-s: 11%;
+        --couleur5-l: 54%;
+        --couleur5-nominale: hsl(var(--couleur5-h), var(--couleur5-s), var(--couleur5-l));
+        --couleur5-hover: hsl(var(--couleur5-h), var(--couleur5-s), calc(var(--couleur5-l)*1.2));
+        /*font*/
+        --Ubuntu: 'Ubuntu';
+    }
+    
+    @media screen and (min-width :1200px) {
+        h2 {
+            color: var(--couleur2-nominale);
+            font-size: var(--h2size);
+            text-shadow: 2px 2px #444;
+        }
+    }
+    
+    @media screen and (min-width:768x) and (max-width:1199px) {
+        h2 {
+            color: var(--couleur2-nominale);
+            font-size: calc(var(--h2size)*80%);
+        }
+    }
+    
+    @media screen and (max-width :767px) {
+        h2 {
+            color: var(--couleur2-nominale);
+            font-size: calc(var(--h2size)*50%);
+        }
+    }
+    /*calc*/
+    
+    body {
+        font-family: var(--Ubuntu);
+        background-color: var(--couleur2-nominale);
+    }
+    
+    h4 {
+        font-size: 24px;
+        font-family: 'Ubuntu';
+        color: darkgreen;
+    }
+    
+    p {
+        font-size: 18px;
+        color: darkgreen;
+        font-family: 'Ubuntu';
+    }
+    
+    ul {
+        list-style: none
+    }
+    
+    a {
+        text-decoration: none
+    }
+    
+    .orange {
+        color: slategrey
+    }
+    /* HEADER */
+    
+    header {
+        height: 90px;
+    }
+    
+    .logo {}
+    
+    header nav {}
+    
+    header nav ul li {}
+    
+    header nav ul li a {
+        text-transform: uppercase;
+    }
+    
+    .nav_link:hover {}
+    /*Main image*/
+    
+    #main-image {
+        background: url('image/yoga%20smoothie.jpg') no-repeat;
+    }
+    
+    .button-1 {
+        display: block;
+        width: 180px;
+        height: 50px;
+        background: var(--or);
+        text-transform: uppercase;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+    
+    .button-1:hover {
+        background-color: calc(var(--or));
+    }

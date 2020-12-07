@@ -1,30 +1,11 @@
-    body {
-        border: solid 2px red;
-    }
-    
-    h2 {
-        border: solid 2px pink;
-    }
-    
-    div {
-        border: solid 2px blue;
-    }
-    
-    header {
-        border: solid 2px green;
-    }
-    
-    li {
-        border: solid 2px yellow;
-    }
-    
-    ul {
-        border: solid 2px purple;
-    }
-    
-    footer {
-        border: solid 2px lightblue;
-    }
+    body {border: solid 2px red;}
+    h2 {border: solid 2px pink;}
+    div {border: solid 2px blue;}
+    header {border: solid 2px green;}
+    li {border: solid 2px yellow;}
+    ul {border: solid 2px purple;}
+    footer {border: solid 2px lightblue;}
+
     /* GENERAL */
     
 :root {
@@ -32,11 +13,13 @@
         --h2size: 60px;
         --navlink-fs: 20px;
         --footer-fs:25px;
-
+        
          /*margin generale*/
         --marge-laterale: 5vh;
         --marge-bottom-up: 2vh; 
 
+        /*margin main button*/
+        --marge-main-but: 10em;
 
         /*rose*/
         --couleur1-h: 0;
@@ -79,18 +62,18 @@
         font-family: var(--Ubuntu);
         background-color: var(--couleur2-nominale);
         margin: var(--marge-bottom-up) var(--marge-laterale);
-    
-    
     }
-    
+
+    main div{
+        height:100vh;
+    }
+
     h2 {
-        color: var(--couleur2-nominale);
+        color: black;
         font-size: var(--h2size);
-        text-shadow: 2px 2px #444;
-
+        text-shadow: 3px 3px rgb(228, 220, 220);
+        padding: 0.5em;
     }
-
-
 
     h4 {
         font-size: 24px;
@@ -101,7 +84,7 @@
     p {
         font-size: 18px;
         color: var(--couleur4-nominale);
-        font-family: 'Ubuntu';
+        font-family:'Ubuntu';
     }
     
     ul {
@@ -111,28 +94,29 @@
     a {
         text-decoration: none;
     }
-    
-    .orange {
-        color: slategrey
-    }
+
     /* HEADER */
     
     header {
         height: 100%;
-        text-align: center;
+        background-color: var(--couleur1-nominale) ;
+        text-align:center;
     }
     
-    .logo {}
+    .logo {
+
+    }
     
 
 /*MENU NAVIGATION HEADER*/
 
     header nav ul {
+        display: flex;
         background-color:var(--couleur3-nominale);
     }
 
     header nav ul li {
-        display: inline-block;
+ 
         font-size: var( --navlink-fs);
     }
 
@@ -147,6 +131,10 @@
     
     }
 
+    header nav ul li a:active{
+        color: var(--couleur1-nominale);
+    }
+
 .nav-logo{
 
     width:2em;
@@ -155,15 +143,16 @@
 
 }
 
+    .nav_link:hover {
 
-    .nav_link:hover {}
+    }
     
-    /*Main image*/
+    /*Main*/
     
     #main-image {
         background: url('image/yoga%20smoothie.jpg') no-repeat;
-    
-    
+        background-position: top;
+
     }
     
     .button-1 {
@@ -173,10 +162,42 @@
         text-transform: uppercase;
         font-size: 20px;
         border-radius: 5px;
+        margin: var(--marge-main-but);
     }
 
     .button-1:hover {
-        background-color: calc(var(--or));
+        background-color: );
+    }
+
+
+    /* FOOTER */
+    footer{
+        background-color:var(--couleur2-nominale);
+    }
+
+    footer div{
+        background-color:var(--couleur3-nominale);
+    }
+
+    footer div ul{
+        background-color:var(--couleur2-nominale);
+    }
+
+    footer p{
+        color: var(--couleur2-nominale);
+        font-size: var(--footer-fs);
+        font-weight: lighter;
+        padding-left: 1em;
+    }
+
+    footer p::first-letter{
+        font-size: calc(var(--footer-fs)*1.5);
+    }
+
+    .nav-logo-footer{
+        width:3em;
+        padding-right:0.8em;
+        vertical-align: middle;
     }
 
     .copyright{
@@ -184,22 +205,6 @@
         background-color: var(--couleur3-nominale);
         color: black;
 
-    }
-
-
-    footer{
-        background-color:var(--couleur4-nominale);
-    }
-
-    footer p{
-        color: var(--couleur2-nominale);
-        font-size: var(--footer-fs);
-        font-weight: bold;
-        padding-left: 1em;
-    }
-
-    footer p::first-letter{
-        font-size: calc(var(--footer-fs)*1.5);
     }
 
 
@@ -226,6 +231,11 @@
             font-size: calc(var(--h2size)*0.70);
         }
 
+        .button-1{
+            margin: calc(var(--marge-main-but)*0.80)
+
+
+        }
 
 
 

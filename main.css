@@ -27,8 +27,17 @@
     }
     /* GENERAL */
     
-     :root {
+:root {
+    
         --h2size: 60px;
+        --navlink-fs: 20px;
+        --footer-fs:25px;
+
+         /*margin generale*/
+        --marge-laterale: 5vh;
+        --marge-bottom-up: 2vh; 
+
+
         /*rose*/
         --couleur1-h: 0;
         --couleur1-s: 67%;
@@ -59,38 +68,30 @@
         --couleur5-l: 54%;
         --couleur5-nominale: hsl(var(--couleur5-h), var(--couleur5-s), var(--couleur5-l));
         --couleur5-hover: hsl(var(--couleur5-h), var(--couleur5-s), calc(var(--couleur5-l)*1.2));
+
         /*font*/
         --Ubuntu: 'Ubuntu';
-    }
+}
     
-    @media screen and (min-width :1200px) {
-        h2 {
-            color: var(--couleur2-nominale);
-            font-size: var(--h2size);
-            text-shadow: 2px 2px #444;
-        }
-    }
-    
-    @media screen and (min-width:768x) and (max-width:1199px) {
-        h2 {
-            color: var(--couleur2-nominale);
-            font-size: calc(var(--h2size)*80%);
-        }
-    }
-    
-    @media screen and (max-width :767px) {
-        h2 {
-            color: var(--couleur2-nominale);
-            font-size: calc(var(--h2size)*50%);
-        }
-    }
     /*calc*/
     
     body {
         font-family: var(--Ubuntu);
         background-color: var(--couleur2-nominale);
+        margin: var(--marge-bottom-up) var(--marge-laterale);
+    
+    
     }
     
+    h2 {
+        color: var(--couleur2-nominale);
+        font-size: var(--h2size);
+        text-shadow: 2px 2px #444;
+
+    }
+
+
+
     h4 {
         font-size: 24px;
         font-family: 'Ubuntu';
@@ -99,16 +100,16 @@
     
     p {
         font-size: 18px;
-        color: darkgreen;
+        color: var(--couleur4-nominale);
         font-family: 'Ubuntu';
     }
     
     ul {
-        list-style: none
+        list-style: none;
     }
     
     a {
-        text-decoration: none
+        text-decoration: none;
     }
     
     .orange {
@@ -117,36 +118,115 @@
     /* HEADER */
     
     header {
-        height: 90px;
+        height: 100%;
+        text-align: center;
     }
     
     .logo {}
     
-    header nav {}
-    
-    header nav ul li {}
-    
+
+/*MENU NAVIGATION HEADER*/
+
+    header nav ul {
+        background-color:var(--couleur3-nominale);
+    }
+
+    header nav ul li {
+        display: inline-block;
+        font-size: var( --navlink-fs);
+    }
+
     header nav ul li a {
         text-transform: uppercase;
+        color:hsl(var(--couleur2-h), var(--couleur2-s), calc(var(--couleur2-l)*1.5));
+        padding-right:1em;
     }
+
+    header nav ul li a:visited{
+        color: var(--couleur2-nominale);
     
+    }
+
+.nav-logo{
+
+    width:2em;
+    padding-right:0.8em;
+    vertical-align: middle;
+
+}
+
+
     .nav_link:hover {}
+    
     /*Main image*/
     
     #main-image {
         background: url('image/yoga%20smoothie.jpg') no-repeat;
+    
+    
     }
     
     .button-1 {
-        display: block;
         width: 180px;
         height: 50px;
-        background: var(--or);
+        background-color: var(--couleur1-nominale);
         text-transform: uppercase;
         font-size: 20px;
         border-radius: 5px;
     }
-    
+
     .button-1:hover {
         background-color: calc(var(--or));
+    }
+
+    .copyright{
+
+        background-color: var(--couleur3-nominale);
+        color: black;
+
+    }
+
+
+    footer{
+        background-color:var(--couleur4-nominale);
+    }
+
+    footer p{
+        color: var(--couleur2-nominale);
+        font-size: var(--footer-fs);
+        font-weight: bold;
+        padding-left: 1em;
+    }
+
+    footer p::first-letter{
+        font-size: calc(var(--footer-fs)*1.5);
+    }
+
+
+    /*ENTRE 768 et 1200 px*/
+    @media screen and (max-width: 1200px){
+        
+        body{
+            margin: calc(var(--marge-bottom-up)*0.5) calc(var(--marge-laterale)*0.5);
+        }
+        
+        h2{
+            font-size: calc(var(--h2size)*0.75);
+        }
+    }
+    /*SMALLER THAN 768px*/
+    @media screen and (max-width: 768px){
+    
+        header nav ul li {
+            display: block;
+            font-size: calc(var( --navlink-fs)*0.80);
+        }
+
+        h2{
+            font-size: calc(var(--h2size)*0.70);
+        }
+
+
+
+
     }

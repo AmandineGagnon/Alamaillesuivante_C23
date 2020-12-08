@@ -59,13 +59,15 @@
     /*calc*/
     
     body {
+        display:flex;
+        flex-direction: column;
         font-family: var(--Ubuntu);
         background-color: var(--couleur2-nominale);
-        margin: var(--marge-bottom-up) var(--marge-laterale);
     }
 
     main div{
-        height:100vh;
+        display:flex;
+        flex-direction: column;
     }
 
     h2 {
@@ -98,9 +100,12 @@
     /* HEADER */
     
     header {
-        height: 100%;
+        display: flex;
+        flex-direction: column;
         background-color: var(--couleur1-nominale) ;
         text-align:center;
+        
+       
     }
     
     .logo {
@@ -113,12 +118,22 @@
     header nav ul {
         display: flex;
         background-color:var(--couleur3-nominale);
+        padding-left: 0px;
+        margin-bottom: 0px;
+       
     }
 
     header nav ul li {
- 
         font-size: var( --navlink-fs);
+        flex-grow:1;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
+
+    header nav ul li:hover{
+        background-color: var(--couleur1-nominale);
+    }
+
 
     header nav ul li a {
         text-transform: uppercase;
@@ -132,7 +147,7 @@
     }
 
     header nav ul li a:active{
-        color: var(--couleur1-nominale);
+        color: black;
     }
 
 .nav-logo{
@@ -152,7 +167,6 @@
     #main-image {
         background: url('image/yoga%20smoothie.jpg') no-repeat;
         background-position: top;
-
     }
     
     .button-1 {
@@ -166,21 +180,33 @@
     }
 
     .button-1:hover {
-        background-color: );
+
     }
 
 
     /* FOOTER */
     footer{
+
+        display:flex;
+        flex-direction: column;
         background-color:var(--couleur2-nominale);
     }
 
-    footer div{
-        background-color:var(--couleur3-nominale);
+    .reseaux_sociaux{
+        background-color:var(--couleur5-nominale);
     }
 
     footer div ul{
-        background-color:var(--couleur2-nominale);
+        display:flex;
+        background-color:var(--couleur5-nominale);
+        padding:0px;
+        margin:0px;
+        justify-content: center;
+        
+    }
+
+    footer div ul li{
+        flex-wrap: wrap;
     }
 
     footer p{
@@ -201,20 +227,14 @@
     }
 
     .copyright{
-
+        padding-top: 0.5em;
         background-color: var(--couleur3-nominale);
         color: black;
-
     }
 
 
     /*ENTRE 768 et 1200 px*/
     @media screen and (max-width: 1200px){
-        
-        body{
-            margin: calc(var(--marge-bottom-up)*0.5) calc(var(--marge-laterale)*0.5);
-        }
-        
         h2{
             font-size: calc(var(--h2size)*0.75);
         }
@@ -233,10 +253,12 @@
 
         .button-1{
             margin: calc(var(--marge-main-but)*0.80)
-
-
+        }
+        footer div ul li{
+            text-align:center;
         }
 
-
-
+        header nav ul{
+            flex-direction: column;
+        }
     }
